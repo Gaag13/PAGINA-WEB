@@ -1,73 +1,1367 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Bellisimo Bloom | Flores y Detalles</title>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bellísimo Momentos — Flores y Detalles</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&amp;family=Poppins:wght@300;400;500&amp;family=Sacramento&amp;display=swap" rel="stylesheet"/>
 
-    <!-- Conexión con el CSS -->
-    <link rel="stylesheet" href="css/styles.css">
-</head>
+<link href="css/styles.css" rel="stylesheet"/></head>
 <body>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursor-ring"></div>
+<!-- NAV -->
+<nav>
+<a class="nav-logo" href="#" onclick="showPage('home'); return false;">
+<span class="nav-logo-main">Bellísimo Momentos</span>
+<span class="nav-logo-sub">Flores y Detalles</span>
+</a>
+<ul class="nav-links">
+<li><a href="#" id="nav-historia" onclick="showPage('home'); scrollToSection('nosotros'); return false;">Nuestra historia</a></li>
+<li><a href="#" id="nav-coleccion" onclick="showPage('catalogo'); return false;">Colección</a></li>
+<li><a href="#" id="nav-pedidos" onclick="showPage('pedido'); return false;">Pedidos</a></li>
+<li><a href="#" id="nav-contacto" onclick="showPage('home'); scrollToSection('contacto'); return false;">Contacto</a></li>
+</ul>
+<a class="nav-cta" href="#" onclick="showPage('pedido'); return false;">Hacer pedido</a>
+</nav>
+<!-- ═══════════════════ HOME PAGE ═══════════════════ -->
+<div class="page active" id="page-home">
+<!-- HERO -->
+<section class="hero">
+<div class="hero-left">
+<div class="hero-logo-block">
+<div class="hero-logo-main">Bellísimo Momentos</div>
+<div class="hero-logo-sub">Flores y Detalles</div>
+</div>
+<h1 class="hero-title">Detalles que<br/><em>florecen</em><br/>en tu corazón</h1>
+<p class="hero-subtitle">Cada arreglo es una carta de amor sin palabras. Creados con flores frescas y alma artesanal, para que cada detalle cuente una historia que perdure.</p>
+<div class="hero-actions">
+<a class="btn-primary" href="#" onclick="showPage('catalogo'); return false;">Ver colección</a>
+<a class="btn-ghost" href="#" onclick="scrollToSection('nosotros'); return false;">Nuestra historia</a>
+</div>
+<div class="scroll-hint"><div class="scroll-line"></div><span>Descubrir</span></div>
+</div>
+<div class="botanical-bg">
+<svg fill="none" viewbox="0 0 600 800" xmlns="http://www.w3.org/2000/svg">
+<circle cx="300" cy="400" r="250" stroke="#6a4f70" stroke-width="0.5"></circle>
+<circle cx="300" cy="400" r="200" stroke="#6a4f70" stroke-width="0.5"></circle>
+<circle cx="300" cy="400" r="150" stroke="#6a4f70" stroke-width="0.5"></circle>
+<line stroke="#6a4f70" stroke-width="0.5" x1="50" x2="550" y1="400" y2="400"></line>
+<line stroke="#6a4f70" stroke-width="0.5" x1="300" x2="300" y1="150" y2="650"></line>
+<line stroke="#6a4f70" stroke-width="0.3" x1="123" x2="477" y1="223" y2="577"></line>
+<line stroke="#6a4f70" stroke-width="0.3" x1="477" x2="123" y1="223" y2="577"></line>
+<ellipse cx="300" cy="400" rx="100" ry="250" stroke="#6a4f70" stroke-width="0.3"></ellipse>
+<ellipse cx="300" cy="400" rx="250" ry="100" stroke="#6a4f70" stroke-width="0.3"></ellipse>
+</svg>
+<div class="hero-image-placeholder">
+<div class="float-tag float-tag-1">✦ Chinácota, N. de Stder.</div>
+<div class="floral-frame">
+<div class="frame-inner">
+<div class="frame-flowers">🌸🌷🌺</div>
+<div class="frame-caption">con amor, siempre</div>
+</div>
+<div class="float-tag float-tag-2">Arreglos personalizados</div>
+</div>
+</div>
+</div>
+</section>
+<!-- MARQUEE -->
+<div class="quote-strip">
+<div class="quote-scroll">
+<span class="quote-item">Bellísimo Momentos <span class="quote-dot"></span></span>
+<span class="quote-item">Con amor, siempre <span class="quote-dot"></span></span>
+<span class="quote-item">Flores que hablan por ti <span class="quote-dot"></span></span>
+<span class="quote-item">Momentos que perduran <span class="quote-dot"></span></span>
+<span class="quote-item">Hecho con alma artesanal <span class="quote-dot"></span></span>
+<span class="quote-item">Chinácota, Norte de Santander <span class="quote-dot"></span></span>
+<span class="quote-item">Bellísimo Momentos <span class="quote-dot"></span></span>
+<span class="quote-item">Con amor, siempre <span class="quote-dot"></span></span>
+<span class="quote-item">Flores que hablan por ti <span class="quote-dot"></span></span>
+<span class="quote-item">Momentos que perduran <span class="quote-dot"></span></span>
+<span class="quote-item">Hecho con alma artesanal <span class="quote-dot"></span></span>
+<span class="quote-item">Chinácota, Norte de Santander <span class="quote-dot"></span></span>
+</div>
+</div>
+<!-- STORY -->
+<section class="section-story" id="nosotros">
+<div class="story-text reveal">
+<div class="section-label">Nuestra historia</div>
+<h2 class="story-title">Cada flor es una<br/><em>carta sin palabras</em></h2>
+<p class="story-body">Bellísimo Momentos nació del amor a lo genuino, a esos gestos pequeños que lo dicen todo. Como aquellas cartas perfumadas que llegaban dobladas con cuidado, nuestros arreglos llevan un mensaje que las palabras no siempre alcanzan a decir.</p>
+<p class="story-body">Con raíces en Chinácota y el corazón puesto en cada detalle, creamos flores que no solo se ven hermosas — se sienten.</p>
+<div class="story-signature">Eliana Ferrer</div>
+<p style="font-size:11px;letter-spacing:1px;color:var(--ink-light);margin-top:4px;">Fundadora · Bellísimo Momentos</p>
+</div>
+<div class="story-visual reveal">
+<div class="letter-card">
+<div class="letter-stamp">🌷<span>Bellísimo Momentos</span></div>
+<p class="letter-date">Chinácota, 2026</p>
+<p class="letter-body">"Te mando estas flores porque no encontré palabras suficientemente bonitas para decirte lo que siento. Que lleguen a ti como llega la primavera — sin aviso, pero llenándolo todo."</p>
+<div class="letter-closing">Con todo mi amor</div>
+<div class="wax-seal">✦</div>
+</div>
+</div>
+</section>
+<!-- PALETTE STRIP -->
+<div class="palette-strip">
+<div style="background:#6b874c"></div><div style="background:#d7caa9"></div>
+<div style="background:#e3cae3"></div><div style="background:#6a4f70"></div>
+<div style="background:#e8c4c4"></div>
+</div>
+<!-- FEATURED PRODUCTS -->
+<section class="section-featured" id="coleccion">
+<div class="section-header reveal">
+<p class="section-label" style="justify-content:center;">Lo más querido</p>
+<h2 class="section-title">Favoritos que <em>enamoran</em></h2>
+<p class="section-sub">para cada momento especial</p>
+</div>
+<div class="featured-grid">
+<div class="product-card reveal">
+<div class="product-img c1"><div class="product-tag-badge">Más pedido</div>🌸</div>
+<div class="product-info">
+<h3 class="product-name">Bouquet Romántico</h3>
+<p class="product-desc">Rosas, lisianthus y follaje verde. El mensaje perfecto para quien ocupa tu corazón.</p>
+<div class="product-footer"><span class="product-price">Desde $45.000</span><a class="product-btn" href="#" onclick="showPage('catalogo','bouquets'); return false;">Pedir →</a></div>
+</div>
+</div>
+<div class="product-card reveal" style="transition-delay:0.12s">
+<div class="product-img c2"><div class="product-tag-badge verde">Temporada</div>🌻</div>
+<div class="product-info">
+<h3 class="product-name">Flores Amarillas</h3>
+<p class="product-desc">Para el 21 de marzo y todos los días que merecen buena suerte. Prosperidad en flores.</p>
+<div class="product-footer"><span class="product-price">Desde $35.000</span><a class="product-btn" href="#" onclick="showPage('catalogo','amarillas'); return false;">Pedir →</a></div>
+</div>
+</div>
+<div class="product-card reveal" style="transition-delay:0.24s">
+<div class="product-img c3"><div class="product-tag-badge">Personalizado</div>🌹</div>
+<div class="product-info">
+<h3 class="product-name">Detalle con Carta</h3>
+<p class="product-desc">Flores frescas más una carta escrita a mano. El detalle más íntimo y recordado.</p>
+<div class="product-footer"><span class="product-price">Desde $60.000</span><a class="product-btn" href="#" onclick="showPage('catalogo','detalles'); return false;">Pedir →</a></div>
+</div>
+</div>
+</div>
+<div class="ver-catalogo-wrap reveal">
+<a class="btn-ver-catalogo" href="#" onclick="showPage('catalogo'); return false;">Ver catálogo completo →</a>
+</div>
+</section>
+<!-- TESTIMONIALS -->
+<section class="section-testimonial">
+<div class="testimonial-visual reveal">
+<div class="postcard postcard-1">
+<p class="postcard-quote">"Nunca pensé que unas flores pudieran hacerme llorar de emoción. El detalle que me mandaron fue el más bonito que he recibido en mi vida."</p>
+<div class="postcard-author">— María C.</div>
+</div>
+<div class="postcard postcard-2">
+<p class="postcard-quote" style="color:var(--morado-dark)">"Pedí un arreglo para el Día de la Madre y mi mamá lo guardó seco durante meses. Dijo que no quería tirarlo."</p>
+<div class="postcard-author" style="color:var(--morado-dark)">— Juan P.</div>
+</div>
+</div>
+<div class="testimonial-text reveal">
+<div class="big-quote">"</div>
+<h2 class="testimonial-title">Flores que se quedan<br/>en la <em>memoria</em></h2>
+<p class="testimonial-body">En Bellísimo Momentos no solo vendemos flores — creamos experiencias. Desde el momento en que nos escriben hasta cuando llega el arreglo, cuidamos cada detalle como si fuera para alguien que amamos.</p>
+</div>
+</section>
+<!-- CTA -->
+<section class="section-cta" id="pedidos">
+<p class="cta-eyebrow">¿Lista para sorprender?</p>
+<h2 class="cta-title">Tu <em>momento perfecto</em><br/>te está esperando</h2>
+<p class="cta-sub">Cuéntanos la ocasión, la persona y el sentimiento. Nosotros lo convertimos en un momento que se recuerda siempre.</p>
+<div class="cta-actions">
+<a class="btn-light" href="https://wa.me/57XXXXXXXXXX">Escribir por WhatsApp</a>
+<a class="btn-outline-light" href="#" onclick="showPage('catalogo'); return false;">Ver colección completa</a>
+</div>
+</section>
+<!-- FOOTER -->
+<footer id="contacto">
+<div>
+<div class="footer-logo">Bellísimo Momentos</div>
+<div class="footer-tagline">Flores y Detalles</div>
+<p class="footer-desc">Arreglos florales y detalles personalizados con alma artesanal. Chinácota, Norte de Santander, Colombia.</p>
+</div>
+<div>
+<p class="footer-col-title">Navegación</p>
+<ul class="footer-links">
+<li><a href="#" onclick="scrollToSection('nosotros'); return false;">Nuestra historia</a></li>
+<li><a href="#" onclick="showPage('catalogo'); return false;">Colección</a></li>
+<li><a href="#" onclick="scrollToSection('pedidos'); return false;">Hacer un pedido</a></li>
+<li><a href="#" onclick="scrollToSection('contacto'); return false;">Contacto</a></li>
+</ul>
+</div>
+<div>
+<p class="footer-col-title">Fechas especiales</p>
+<ul class="footer-links">
+<li><a href="#" onclick="showPage('catalogo','madre'); return false;">Día de la Madre</a></li>
+<li><a href="#" onclick="showPage('catalogo','amistad'); return false;">Amor y Amistad</a></li>
+<li><a href="#" onclick="showPage('catalogo','amarillas'); return false;">Flores Amarillas</a></li>
+<li><a href="#" onclick="showPage('catalogo','navidad'); return false;">Navidad</a></li>
+<li><a href="#" onclick="showPage('catalogo','mujer'); return false;">Día de la Mujer</a></li>
+</ul>
+</div>
+</footer>
+<div class="footer-bottom">
+<span class="footer-copy">© 2026 Bellísimo Momentos — Chinácota, Norte de Santander</span>
+<span class="footer-heart">Hecho con amor</span>
+</div>
+</div><!-- end page-home -->
+<!-- ═══════════════════ CATALOG PAGE ═══════════════════ -->
+<div class="page" id="page-catalogo">
+<div class="catalog-hero">
+<p class="catalog-hero-label">Colección 2026</p>
+<h1 class="catalog-hero-title">Nuestros arreglos</h1>
+<p class="catalog-hero-sub">cada uno hecho con amor, para tu momento especial</p>
+</div>
+<!-- FILTER BAR -->
+<div class="filter-bar-wrap">
+<div class="filter-bar">
+<button class="filter-btn active" onclick="filterCatalog('todos',this)">✦ Todos</button>
+<button class="filter-btn" onclick="filterCatalog('madre',this)">Día de la Madre</button>
+<button class="filter-btn" onclick="filterCatalog('mujer',this)">Día de la Mujer</button>
+<button class="filter-btn" onclick="filterCatalog('amistad',this)">Amor y Amistad</button>
+<button class="filter-btn" onclick="filterCatalog('amarillas',this)">Flores Amarillas</button>
+<button class="filter-btn" onclick="filterCatalog('bouquets',this)">Bouquets</button>
+<button class="filter-btn" onclick="filterCatalog('base',this)">Flores en Base</button>
+<button class="filter-btn" onclick="filterCatalog('detalles',this)">Detalles</button>
+<button class="filter-btn" onclick="filterCatalog('globos',this)">Globos</button>
+<button class="filter-btn" onclick="filterCatalog('navidad',this)">Navidad</button>
+</div>
+</div>
+<div class="catalog-body">
+<!-- TODOS -->
+<div class="catalog-section visible" id="cat-todos">
+<!-- Bouquets -->
+<div class="catalog-category-title">Bouquets</div>
+<p class="catalog-category-desc">Arreglos florales en ramo, diseñados para expresar lo que las palabras no alcanzan</p>
+<div class="catalog-grid">
+<div class="cat-card"><div class="cat-img c1"><div class="cat-badge">Más pedido</div>🌸</div><div class="cat-info"><div class="cat-name">Bouquet Romántico</div><div class="cat-desc">Rosas, lisianthus y follaje. Para decirle todo sin hablar.</div><div class="cat-footer"><span class="cat-price">Desde $45.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c6"><div class="cat-badge">Nuevo</div>🌺</div><div class="cat-info"><div class="cat-name">Bouquet Eternidad</div><div class="cat-desc">Flores preservadas que duran para siempre, como ese amor.</div><div class="cat-footer"><span class="cat-price">Desde $80.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c3">🌷</div><div class="cat-info"><div class="cat-name">Bouquet Pastel</div><div class="cat-desc">Tonos suaves y delicados para los momentos más tiernos.</div><div class="cat-footer"><span class="cat-price">Desde $50.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c1"><div class="cat-badge r">Especial</div>🌹</div><div class="cat-info"><div class="cat-name">Bouquet de Rosas</div><div class="cat-desc">Clásico e infalible. Rosas frescas en el color que elijas.</div><div class="cat-footer"><span class="cat-price">Desde $55.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+</div>
+<!-- Flores en Base -->
+<div class="catalog-category-title">Flores en Base</div>
+<p class="catalog-category-desc">Arreglos en florero, jarrón o caja que decoran y emocionan al mismo tiempo</p>
+<div class="catalog-grid">
+<div class="cat-card"><div class="cat-img c5">🏺</div><div class="cat-info"><div class="cat-name">Jarrón Clásico</div><div class="cat-desc">Flores mixtas en jarrón de vidrio. Elegante y duradero.</div><div class="cat-footer"><span class="cat-price">Desde $65.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c6"><div class="cat-badge">Tendencia</div>🌸</div><div class="cat-info"><div class="cat-name">Caja de Flores</div><div class="cat-desc">Arreglo en caja sorpresa con papel tissue y lazo.</div><div class="cat-footer"><span class="cat-price">Desde $70.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c2">🌿</div><div class="cat-info"><div class="cat-name">Florero Rústico</div><div class="cat-desc">Flores silvestres en base de madera o barro. Natural y auténtico.</div><div class="cat-footer"><span class="cat-price">Desde $60.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c3">🎁</div><div class="cat-info"><div class="cat-name">Canasta Floral</div><div class="cat-desc">Arreglo en canasta artesanal con flores y follaje verde.</div><div class="cat-footer"><span class="cat-price">Desde $75.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+</div>
+<!-- Detalles -->
+<div class="catalog-category-title">Detalles</div>
+<p class="catalog-category-desc">Pequeños gestos hechos a mano que generan grandes emociones</p>
+<div class="catalog-grid">
+<div class="cat-card"><div class="cat-img c3"><div class="cat-badge">Personalizado</div>✉️</div><div class="cat-info"><div class="cat-name">Detalle con Carta</div><div class="cat-desc">Flores + carta manuscrita. El más recordado de todos.</div><div class="cat-footer"><span class="cat-price">Desde $60.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c4">🍫</div><div class="cat-info"><div class="cat-name">Flores y Chocolates</div><div class="cat-desc">Bouquet + caja de chocolates artesanales. Irresistible.</div><div class="cat-footer"><span class="cat-price">Desde $85.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c6">🕯️</div><div class="cat-info"><div class="cat-name">Set Romántico</div><div class="cat-desc">Flores + vela aromática + tarjeta personalizada.</div><div class="cat-footer"><span class="cat-price">Desde $90.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c1">💐</div><div class="cat-info"><div class="cat-name">Mini Bouquet</div><div class="cat-desc">Un detalle pequeño con gran significado. Perfecto para sorprender.</div><div class="cat-footer"><span class="cat-price">Desde $28.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+</div>
+<!-- Flores Amarillas -->
+<div class="catalog-category-title">Flores Amarillas</div>
+<p class="catalog-category-desc">Para el 21 de marzo y todos los días que merecen prosperidad y alegría</p>
+<div class="catalog-grid">
+<div class="cat-card"><div class="cat-img c4"><div class="cat-badge v">21 Marzo</div>🌻</div><div class="cat-info"><div class="cat-name">Girasoles Felices</div><div class="cat-desc">Girasoles frescos que traen luz y alegría a quien los recibe.</div><div class="cat-footer"><span class="cat-price">Desde $35.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c4">🌼</div><div class="cat-info"><div class="cat-name">Bouquet Amarillo</div><div class="cat-desc">Mixtura de flores amarillas para un inicio de año lleno de buena vibra.</div><div class="cat-footer"><span class="cat-price">Desde $40.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c4"><div class="cat-badge v">Prosperidad</div>✨</div><div class="cat-info"><div class="cat-name">Set 21 de Marzo</div><div class="cat-desc">Flores amarillas + carta de buenos deseos + detalle especial.</div><div class="cat-footer"><span class="cat-price">Desde $65.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c4">🌷</div><div class="cat-info"><div class="cat-name">Jarrón Dorado</div><div class="cat-desc">Arreglo en base con flores amarillas y toques dorados.</div><div class="cat-footer"><span class="cat-price">Desde $70.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+</div>
+<!-- Globos -->
+<div class="catalog-category-title">Globos y Sorpresas</div>
+<p class="catalog-category-desc">Para las sorpresas más festivas y los momentos más alegres</p>
+<div class="catalog-grid">
+<div class="cat-card"><div class="cat-img c5">🎈</div><div class="cat-info"><div class="cat-name">Globos con Flores</div><div class="cat-desc">Bouquet de flores acompañado de globos personalizados.</div><div class="cat-footer"><span class="cat-price">Desde $50.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c5"><div class="cat-badge">Cumpleaños</div>🎂</div><div class="cat-info"><div class="cat-name">Set Celebración</div><div class="cat-desc">Globos metálicos + flores + tarjeta para el día más especial.</div><div class="cat-footer"><span class="cat-price">Desde $75.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c6">💜</div><div class="cat-info"><div class="cat-name">Globo Gigante + Flores</div><div class="cat-desc">Globo número o letra + arreglo floral. La sorpresa perfecta.</div><div class="cat-footer"><span class="cat-price">Desde $90.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c3">🎁</div><div class="cat-info"><div class="cat-name">Caja Sorpresa</div><div class="cat-desc">Caja con globos que explotan al abrirse + mensaje oculto.</div><div class="cat-footer"><span class="cat-price">Desde $80.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+</div>
+</div><!-- end cat-todos -->
+<!-- DÍA DE LA MADRE -->
+<div class="catalog-section" id="cat-madre">
+<div class="catalog-category-title">Día de la Madre</div>
+<p class="catalog-category-desc">Para la persona más importante de tu vida — cada flor lleva todo lo que sientes</p>
+<div class="catalog-grid">
+<div class="cat-card"><div class="cat-img c1"><div class="cat-badge">Más pedido</div>🌸</div><div class="cat-info"><div class="cat-name">Bouquet para Mamá</div><div class="cat-desc">Rosas y lisianthus en tonos rosados. El favorito del Día de la Madre.</div><div class="cat-footer"><span class="cat-price">Desde $50.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c3"><div class="cat-badge">Con carta</div>💌</div><div class="cat-info"><div class="cat-name">Detalle de Amor</div><div class="cat-desc">Flores + carta escrita a mano con lo que siempre quisiste decirle.</div><div class="cat-footer"><span class="cat-price">Desde $65.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c6"><div class="cat-badge">Premium</div>🎁</div><div class="cat-info"><div class="cat-name">Set Mamá Especial</div><div class="cat-desc">Flores + chocolates + vela + tarjeta. Todo en una sola caja hermosa.</div><div class="cat-footer"><span class="cat-price">Desde $110.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c5">🌷</div><div class="cat-info"><div class="cat-name">Canasta Mamá</div><div class="cat-desc">Arreglo en canasta artesanal con flores mixtas y follaje.</div><div class="cat-footer"><span class="cat-price">Desde $80.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c4">🌻</div><div class="cat-info"><div class="cat-name">Girasoles para Mamá</div><div class="cat-desc">Para la mamá alegre y radiante que ilumina tu vida.</div><div class="cat-footer"><span class="cat-price">Desde $40.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c1"><div class="cat-badge r">Agotarse pronto</div>🌹</div><div class="cat-info"><div class="cat-name">Docena de Rosas</div><div class="cat-desc">El clásico que nunca falla. 12 rosas frescas para la reina de tu hogar.</div><div class="cat-footer"><span class="cat-price">Desde $75.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c6">🎈</div><div class="cat-info"><div class="cat-name">Flores y Globos</div><div class="cat-desc">Bouquet festivo + globos personalizados para sorprenderla.</div><div class="cat-footer"><span class="cat-price">Desde $70.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c3">🍫</div><div class="cat-info"><div class="cat-name">Flores y Chocolate</div><div class="cat-desc">Mini bouquet + caja de chocolates artesanales. Irresistible.</div><div class="cat-footer"><span class="cat-price">Desde $70.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+</div>
+</div>
+<!-- DÍA DE LA MUJER -->
+<div class="catalog-section" id="cat-mujer">
+<div class="catalog-category-title">Día de la Mujer</div>
+<p class="catalog-category-desc">Para celebrar a esa mujer poderosa, valiente y hermosa — el 8 de marzo y todos los días</p>
+<div class="catalog-grid">
+<div class="cat-card"><div class="cat-img c6"><div class="cat-badge">8 Marzo</div>💜</div><div class="cat-info"><div class="cat-name">Bouquet Empoderamiento</div><div class="cat-desc">Flores moradas y lilas. Para la mujer que lo merece todo.</div><div class="cat-footer"><span class="cat-price">Desde $55.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c1">🌸</div><div class="cat-info"><div class="cat-name">Bouquet Rosa Poder</div><div class="cat-desc">Rosas en tono fucsia y rosa intenso. Fuerte y hermosa como ella.</div><div class="cat-footer"><span class="cat-price">Desde $50.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c3"><div class="cat-badge">Con carta</div>✉️</div><div class="cat-info"><div class="cat-name">Detalle Mujer Especial</div><div class="cat-desc">Flores + mensaje inspirador escrito a mano para celebrarla.</div><div class="cat-footer"><span class="cat-price">Desde $65.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c6"><div class="cat-badge">Premium</div>🎁</div><div class="cat-info"><div class="cat-name">Set Mujer Poderosa</div><div class="cat-desc">Flores + vela + chocolate + tarjeta en caja morada de regalo.</div><div class="cat-footer"><span class="cat-price">Desde $100.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+</div>
+</div>
+<!-- AMOR Y AMISTAD -->
+<div class="catalog-section" id="cat-amistad">
+<div class="catalog-category-title">Amor y Amistad</div>
+<p class="catalog-category-desc">Para esa persona especial — novio/a, esposo/a, amiga del alma o hermano del corazón</p>
+<div class="catalog-grid">
+<div class="cat-card"><div class="cat-img c1"><div class="cat-badge r">Amor</div>🌹</div><div class="cat-info"><div class="cat-name">Rosas del Corazón</div><div class="cat-desc">Docena de rosas rojas con tarjeta y lazo. El clásico del amor.</div><div class="cat-footer"><span class="cat-price">Desde $70.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c4"><div class="cat-badge v">Amistad</div>🌻</div><div class="cat-info"><div class="cat-name">Girasoles de Amistad</div><div class="cat-desc">Para la amiga que siempre está. Alegre, cálida y llena de color.</div><div class="cat-footer"><span class="cat-price">Desde $38.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c3">💌</div><div class="cat-info"><div class="cat-name">Carta de Amor</div><div class="cat-desc">Mini bouquet + carta escrita a mano con tus propias palabras.</div><div class="cat-footer"><span class="cat-price">Desde $55.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c6"><div class="cat-badge">Sorpresa</div>🎁</div><div class="cat-info"><div class="cat-name">Set Amor Perfecto</div><div class="cat-desc">Flores + chocolates + vela + carta. Para el día más especial.</div><div class="cat-footer"><span class="cat-price">Desde $95.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c5">🎈</div><div class="cat-info"><div class="cat-name">Flores y Globo Corazón</div><div class="cat-desc">Bouquet + globo en forma de corazón. Sorpresa garantizada.</div><div class="cat-footer"><span class="cat-price">Desde $60.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c1">🌸</div><div class="cat-info"><div class="cat-name">Bouquet Pastel</div><div class="cat-desc">Flores en tonos suaves y delicados. Para los amores más tiernos.</div><div class="cat-footer"><span class="cat-price">Desde $48.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+</div>
+</div>
+<!-- FLORES AMARILLAS -->
+<div class="catalog-section" id="cat-amarillas">
+<div class="catalog-category-title">Flores Amarillas</div>
+<p class="catalog-category-desc">Para el 21 de marzo y todos los días que merecen prosperidad, alegría y luz</p>
+<div class="catalog-grid">
+<div class="cat-card"><div class="cat-img c4"><div class="cat-badge v">21 Marzo</div>🌻</div><div class="cat-info"><div class="cat-name">Girasoles Felices</div><div class="cat-desc">Girasoles frescos que traen luz y alegría a quien los recibe.</div><div class="cat-footer"><span class="cat-price">Desde $35.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c4">🌼</div><div class="cat-info"><div class="cat-name">Bouquet Amarillo</div><div class="cat-desc">Mixtura de flores amarillas para un inicio de año lleno de buena vibra.</div><div class="cat-footer"><span class="cat-price">Desde $40.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c4"><div class="cat-badge v">Prosperidad</div>✨</div><div class="cat-info"><div class="cat-name">Set 21 de Marzo</div><div class="cat-desc">Flores amarillas + carta de buenos deseos + detalle especial.</div><div class="cat-footer"><span class="cat-price">Desde $65.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c4">🌷</div><div class="cat-info"><div class="cat-name">Jarrón Dorado</div><div class="cat-desc">Arreglo en base con flores amarillas y toques dorados.</div><div class="cat-footer"><span class="cat-price">Desde $70.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+</div>
+</div>
+<!-- BOUQUETS -->
+<div class="catalog-section" id="cat-bouquets">
+<div class="catalog-category-title">Bouquets</div>
+<p class="catalog-category-desc">Arreglos en ramo diseñados para expresar lo que las palabras no alcanzan</p>
+<div class="catalog-grid">
+<div class="cat-card"><div class="cat-img c1"><div class="cat-badge">Más pedido</div>🌸</div><div class="cat-info"><div class="cat-name">Bouquet Romántico</div><div class="cat-desc">Rosas, lisianthus y follaje. Para decirle todo sin hablar.</div><div class="cat-footer"><span class="cat-price">Desde $45.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c6"><div class="cat-badge">Nuevo</div>🌺</div><div class="cat-info"><div class="cat-name">Bouquet Eternidad</div><div class="cat-desc">Flores preservadas que duran para siempre, como ese amor.</div><div class="cat-footer"><span class="cat-price">Desde $80.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c3">🌷</div><div class="cat-info"><div class="cat-name">Bouquet Pastel</div><div class="cat-desc">Tonos suaves y delicados para los momentos más tiernos.</div><div class="cat-footer"><span class="cat-price">Desde $50.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c1"><div class="cat-badge r">Especial</div>🌹</div><div class="cat-info"><div class="cat-name">Bouquet de Rosas</div><div class="cat-desc">Clásico e infalible. Rosas frescas en el color que elijas.</div><div class="cat-footer"><span class="cat-price">Desde $55.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c4">🌻</div><div class="cat-info"><div class="cat-name">Bouquet Silvestre</div><div class="cat-desc">Flores silvestres y ramas naturales. Libre, espontáneo y hermoso.</div><div class="cat-footer"><span class="cat-price">Desde $42.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c6">💜</div><div class="cat-info"><div class="cat-name">Bouquet Morado</div><div class="cat-desc">Flores en tonos morados y lilas. Misterioso y elegante.</div><div class="cat-footer"><span class="cat-price">Desde $52.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+</div>
+</div>
+<!-- FLORES EN BASE -->
+<div class="catalog-section" id="cat-base">
+<div class="catalog-category-title">Flores en Base</div>
+<p class="catalog-category-desc">Arreglos en florero, jarrón o caja que decoran y emocionan al mismo tiempo</p>
+<div class="catalog-grid">
+<div class="cat-card"><div class="cat-img c5">🏺</div><div class="cat-info"><div class="cat-name">Jarrón Clásico</div><div class="cat-desc">Flores mixtas en jarrón de vidrio. Elegante y duradero.</div><div class="cat-footer"><span class="cat-price">Desde $65.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c6"><div class="cat-badge">Tendencia</div>🌸</div><div class="cat-info"><div class="cat-name">Caja de Flores</div><div class="cat-desc">Arreglo en caja sorpresa con papel tissue y lazo.</div><div class="cat-footer"><span class="cat-price">Desde $70.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c2">🌿</div><div class="cat-info"><div class="cat-name">Florero Rústico</div><div class="cat-desc">Flores silvestres en base de madera o barro. Natural y auténtico.</div><div class="cat-footer"><span class="cat-price">Desde $60.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c3">🎁</div><div class="cat-info"><div class="cat-name">Canasta Floral</div><div class="cat-desc">Arreglo en canasta artesanal con flores y follaje verde.</div><div class="cat-footer"><span class="cat-price">Desde $75.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+</div>
+</div>
+<!-- DETALLES -->
+<div class="catalog-section" id="cat-detalles">
+<div class="catalog-category-title">Detalles</div>
+<p class="catalog-category-desc">Pequeños gestos hechos a mano que generan grandes emociones</p>
+<div class="catalog-grid">
+<div class="cat-card"><div class="cat-img c3"><div class="cat-badge">Personalizado</div>✉️</div><div class="cat-info"><div class="cat-name">Detalle con Carta</div><div class="cat-desc">Flores + carta manuscrita. El más recordado de todos.</div><div class="cat-footer"><span class="cat-price">Desde $60.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c4">🍫</div><div class="cat-info"><div class="cat-name">Flores y Chocolates</div><div class="cat-desc">Bouquet + caja de chocolates artesanales. Irresistible.</div><div class="cat-footer"><span class="cat-price">Desde $85.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c6">🕯️</div><div class="cat-info"><div class="cat-name">Set Romántico</div><div class="cat-desc">Flores + vela aromática + tarjeta personalizada.</div><div class="cat-footer"><span class="cat-price">Desde $90.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c1">💐</div><div class="cat-info"><div class="cat-name">Mini Bouquet</div><div class="cat-desc">Un detalle pequeño con gran significado. Perfecto para sorprender.</div><div class="cat-footer"><span class="cat-price">Desde $28.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c3">🎀</div><div class="cat-info"><div class="cat-name">Desayuno Sorpresa</div><div class="cat-desc">Flores + desayuno artesanal + tarjeta. La sorpresa más completa.</div><div class="cat-footer"><span class="cat-price">Desde $120.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c5">🌿</div><div class="cat-info"><div class="cat-name">Set Bienvenida</div><div class="cat-desc">Para recibir a alguien especial con flores, amor y detalles únicos.</div><div class="cat-footer"><span class="cat-price">Desde $75.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+</div>
+</div>
+<!-- GLOBOS -->
+<div class="catalog-section" id="cat-globos">
+<div class="catalog-category-title">Globos y Sorpresas</div>
+<p class="catalog-category-desc">Para las sorpresas más festivas y los momentos más alegres</p>
+<div class="catalog-grid">
+<div class="cat-card"><div class="cat-img c5">🎈</div><div class="cat-info"><div class="cat-name">Globos con Flores</div><div class="cat-desc">Bouquet de flores acompañado de globos personalizados.</div><div class="cat-footer"><span class="cat-price">Desde $50.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c5"><div class="cat-badge">Cumpleaños</div>🎂</div><div class="cat-info"><div class="cat-name">Set Celebración</div><div class="cat-desc">Globos metálicos + flores + tarjeta para el día más especial.</div><div class="cat-footer"><span class="cat-price">Desde $75.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c6">💜</div><div class="cat-info"><div class="cat-name">Globo Gigante + Flores</div><div class="cat-desc">Globo número o letra + arreglo floral. La sorpresa perfecta.</div><div class="cat-footer"><span class="cat-price">Desde $90.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c3">🎁</div><div class="cat-info"><div class="cat-name">Caja Sorpresa</div><div class="cat-desc">Caja con globos que explotan al abrirse + mensaje oculto.</div><div class="cat-footer"><span class="cat-price">Desde $80.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c4">✨</div><div class="cat-info"><div class="cat-name">Globos Metálicos</div><div class="cat-desc">Arreglo de globos metálicos dorados y morados con flores.</div><div class="cat-footer"><span class="cat-price">Desde $60.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c1">🌸</div><div class="cat-info"><div class="cat-name">Bouquet + Globo</div><div class="cat-desc">Tu bouquet favorito + globo de corazón o estrella.</div><div class="cat-footer"><span class="cat-price">Desde $58.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+</div>
+</div>
+<!-- NAVIDAD -->
+<div class="catalog-section" id="cat-navidad">
+<div class="catalog-category-title">Navidad</div>
+<p class="catalog-category-desc">Para celebrar la época más mágica del año con flores, amor y detalles especiales</p>
+<div class="catalog-grid">
+<div class="cat-card"><div class="cat-img c7"><div class="cat-badge v">Navidad</div>🎄</div><div class="cat-info"><div class="cat-name">Arreglo Navideño</div><div class="cat-desc">Flores rojas y verdes con toques dorados. El espíritu navideño en flores.</div><div class="cat-footer"><span class="cat-price">Desde $60.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c3"><div class="cat-badge r">Temporada</div>🎁</div><div class="cat-info"><div class="cat-name">Set Navideño</div><div class="cat-desc">Flores + vela navideña + tarjeta + chocolates. Magia en una caja.</div><div class="cat-footer"><span class="cat-price">Desde $100.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c7">⭐</div><div class="cat-info"><div class="cat-name">Corona de Flores</div><div class="cat-desc">Corona decorativa con flores y ramas navideñas. Para decorar con amor.</div><div class="cat-footer"><span class="cat-price">Desde $80.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+<div class="cat-card"><div class="cat-img c4">✨</div><div class="cat-info"><div class="cat-name">Centro de Mesa</div><div class="cat-desc">Arreglo navideño en base para decorar tu mesa en Navidad.</div><div class="cat-footer"><span class="cat-price">Desde $70.000</span><a class="cat-cta" href="#" onclick="handleCatClick(this); return false;">Pedir →</a></div></div></div>
+</div>
+</div>
+<!-- CTA BANNER -->
+<div class="catalog-cta-banner section-cta">
+<p class="cta-eyebrow">¿No encontraste lo que buscas?</p>
+<h2 class="cta-title">Creamos tu arreglo<br/><em>a la medida</em></h2>
+<p class="cta-sub">Cuéntanos la ocasión, el presupuesto y la persona. Diseñamos algo único solo para ti.</p>
+<div class="cta-actions">
+<a class="btn-light" href="https://wa.me/57XXXXXXXXXX">Pedir personalizado por WhatsApp</a>
+<a class="btn-outline-light" href="#" onclick="showPage('home'); return false;">← Volver al inicio</a>
+</div>
+</div>
+</div><!-- catalog-body -->
+</div><!-- end page-catalogo -->
+<script>
+// ── CURSOR ──
+const cursor = document.getElementById('cursor');
+const ring = document.getElementById('cursor-ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{ mx=e.clientX; my=e.clientY; cursor.style.left=mx+'px'; cursor.style.top=my+'px'; });
+(function animateRing(){ rx+=(mx-rx)*0.12; ry+=(my-ry)*0.12; ring.style.left=rx+'px'; ring.style.top=ry+'px'; requestAnimationFrame(animateRing); })();
+document.querySelectorAll('a,button,.product-card,.cat-card').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{ cursor.style.transform='translate(-50%,-50%) scale(2)'; cursor.style.background='var(--verde)'; });
+  el.addEventListener('mouseleave',()=>{ cursor.style.transform='translate(-50%,-50%) scale(1)'; cursor.style.background='var(--morado)'; });
+});
 
-    <!-- ENCABEZADO -->
-    <header class="header">
-        <h1>Bellisimo Bloom</h1>
-        <p>Flores, detalles y desayunos que enamoran</p>
-    </header>
+// ── PAGE NAVIGATION ──
+function showPage(pageId, category) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-' + pageId).classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 
-    <!-- MENÚ DE NAVEGACIÓN -->
-    <nav class="nav">
-        <a href="#nosotros">Nosotros</a>
-        <a href="#productos">Productos</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
+  // update active nav link
+  document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+  if (pageId === 'catalogo') {
+    document.getElementById('nav-coleccion').classList.add('active');
+    if (category) {
+      setTimeout(() => filterCatalogById(category), 100);
+    } else {
+      setTimeout(() => filterCatalogById('todos'), 100);
+    }
+  } else {
+    document.getElementById('nav-historia').classList.remove('active');
+  }
 
-    <!-- SECCIÓN NOSOTROS -->
-    <section id="nosotros" class="section">
-        <h2>Sobre nuestra marca</h2>
-        <p>
-            En <strong>Bellisimo Bloom</strong> creamos experiencias inolvidables a través de
-            arreglos florales, detalles personalizados y desayunos sorpresa.
-            Cada producto es elaborado con amor, elegancia y dedicación,
-            pensado para sorprender y emocionar.
-        </p>
-    </section>
+  // re-trigger reveal animations
+  setTimeout(() => {
+    document.querySelectorAll('.reveal').forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight) el.classList.add('visible');
+    });
+  }, 150);
+}
 
-    <!-- SECCIÓN PRODUCTOS -->
-    <section id="productos" class="section section-light">
-        <h2>Nuestros productos</h2>
+// ── SCROLL TO SECTION (home) ──
+function scrollToSection(id) {
+  // make sure home is active
+  if (!document.getElementById('page-home').classList.contains('active')) {
+    showPage('home');
+    setTimeout(() => { document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 400);
+  } else {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
 
-        <div class="productos">
-            <div class="producto">
-                <h3>Arreglos florales</h3>
-                <p>Diseños elegantes y personalizados para toda ocasión.</p>
-            </div>
+// ── CATALOG FILTER ──
+function filterCatalog(cat, btn) {
+  filterCatalogById(cat);
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+}
 
-            <div class="producto">
-                <h3>Desayunos sorpresa</h3>
-                <p>Una forma deliciosa y especial de comenzar el día.</p>
-            </div>
+function filterCatalogById(cat) {
+  document.querySelectorAll('.catalog-section').forEach(s => s.classList.remove('visible'));
+  const target = document.getElementById('cat-' + cat);
+  if (target) target.classList.add('visible');
+  // sync filter bar button
+  document.querySelectorAll('.filter-btn').forEach(b => {
+    b.classList.remove('active');
+    if (b.getAttribute('onclick') && b.getAttribute('onclick').includes("'" + cat + "'")) b.classList.add('active');
+  });
+  // scroll to filter bar
+  document.querySelector('.filter-bar-wrap')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
 
-            <div class="producto">
-                <h3>Detalles personalizados</h3>
-                <p>Cajas, regalos y sorpresas hechas a mano con amor.</p>
-            </div>
+// ── SCROLL REVEAL ──
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// ── NAV highlight on scroll (home only) ──
+window.addEventListener('scroll', () => {
+  if (!document.getElementById('page-home').classList.contains('active')) return;
+  const sections = ['nosotros','coleccion','pedidos','contacto'];
+  let current = '';
+  sections.forEach(id => {
+    const el = document.getElementById(id);
+    if (el && window.scrollY >= el.offsetTop - 120) current = id;
+  });
+});
+</script>
+<!-- ═══════════════════ ORDER PAGE ═══════════════════ -->
+<div class="page" id="page-pedido">
+<style>
+/* ── ORDER PAGE STYLES ── */
+.order-wrap { max-width: 900px; margin: 0 auto; padding: 6rem 2rem 4rem; }
+.order-hero { text-align: center; margin-bottom: 3rem; padding-top: 1rem; }
+.order-hero-label { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: var(--verde); margin-bottom: 0.6rem; display: flex; align-items: center; justify-content: center; gap: 10px; }
+.order-hero-label::before,.order-hero-label::after { content:''; display:block; width:24px; height:1px; background:var(--verde); }
+.order-hero-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(30px,4vw,46px); font-style: italic; color: var(--morado); line-height: 1.2; margin-bottom: 0.4rem; }
+.order-hero-sub { font-family: 'Sacramento', cursive; font-size: 20px; color: var(--verde); }
+
+/* Notice banner */
+.order-notice { background: #fff8e8; border: 1px solid #e8d88a; border-left: 4px solid #c8a820; padding: 1rem 1.4rem; border-radius: 2px; margin-bottom: 2rem; display: flex; gap: 12px; align-items: flex-start; }
+.order-notice-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+.order-notice-text { font-family: 'Poppins', sans-serif; font-weight: 300; font-size: 12px; color: #6b5800; line-height: 1.6; }
+.order-notice-text strong { font-weight: 500; color: #4a3d00; }
+
+/* Selected product card */
+.selected-product { background: var(--cream); border: 1.5px solid var(--morado); border-radius: 2px; padding: 1.2rem 1.5rem; margin-bottom: 2rem; display: flex; gap: 1.2rem; align-items: center; position: relative; }
+.selected-product-emoji { font-size: 40px; flex-shrink: 0; }
+.selected-product-info { flex: 1; }
+.selected-product-name { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: var(--ink); margin-bottom: 2px; }
+.selected-product-price { font-family: 'Poppins', sans-serif; font-weight: 300; font-size: 12px; color: var(--morado); }
+.selected-product-change { font-family: 'Poppins', sans-serif; font-weight: 300; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--verde); text-decoration: none; border-bottom: 1px solid var(--verde); cursor: none; }
+.no-product-selected { background: var(--beige-light); border: 1px dashed var(--beige); padding: 1.5rem; text-align: center; margin-bottom: 2rem; }
+.no-product-selected p { font-family: 'Poppins', sans-serif; font-weight: 300; font-size: 12px; color: var(--ink-light); margin-bottom: 0.8rem; }
+
+/* Form layout */
+.order-form { display: flex; flex-direction: column; gap: 2rem; }
+.form-section { background: #fff; border: 1px solid rgba(215,202,169,0.5); border-radius: 2px; padding: 1.8rem 2rem; }
+.form-section-title { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: var(--morado); margin-bottom: 0.2rem; display: flex; align-items: center; gap: 10px; }
+.form-section-title span { font-size: 14px; }
+.form-section-sub { font-family: 'Poppins', sans-serif; font-weight: 300; font-size: 11px; color: var(--ink-light); margin-bottom: 1.4rem; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+.form-row.full { grid-template-columns: 1fr; }
+.form-row.three { grid-template-columns: 1fr 1fr 1fr; }
+.form-group { display: flex; flex-direction: column; gap: 5px; }
+label { font-family: 'Poppins', sans-serif; font-weight: 400; font-size: 10.5px; letter-spacing: 1px; text-transform: uppercase; color: var(--ink-light); }
+label .req { color: var(--morado); }
+input[type=text], input[type=tel], input[type=email], input[type=date], input[type=number], select, textarea {
+  font-family: 'Poppins', sans-serif; font-weight: 300; font-size: 12.5px; color: var(--ink);
+  background: var(--cream); border: 1px solid rgba(215,202,169,0.8); padding: 10px 14px;
+  border-radius: 1px; outline: none; transition: border-color 0.25s, box-shadow 0.25s;
+  width: 100%; cursor: text;
+}
+input:focus, select:focus, textarea:focus { border-color: var(--morado); box-shadow: 0 0 0 3px rgba(106,79,112,0.08); }
+input.error, select.error, textarea.error { border-color: #b85c6e !important; }
+textarea { resize: vertical; min-height: 90px; }
+select { cursor: none; }
+
+/* Date picker highlight */
+input[type=date]::-webkit-calendar-picker-indicator { opacity: 0.5; cursor: pointer; }
+
+/* Photo upload */
+.photo-upload-area { border: 2px dashed rgba(106,79,112,0.25); border-radius: 2px; padding: 2rem; text-align: center; background: #fdfaf5; transition: border-color 0.25s, background 0.25s; cursor: pointer; position: relative; }
+.photo-upload-area:hover { border-color: var(--morado); background: #f5eef8; }
+.photo-upload-area input[type=file] { position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; }
+.photo-upload-icon { font-size: 30px; margin-bottom: 8px; }
+.photo-upload-text { font-family: 'Poppins', sans-serif; font-weight: 300; font-size: 12px; color: var(--ink-light); line-height: 1.6; }
+.photo-upload-text strong { color: var(--morado); font-weight: 400; }
+.photo-preview { display: none; margin-top: 1rem; }
+.photo-preview img { max-width: 100%; max-height: 160px; border: 1px solid var(--beige); border-radius: 2px; object-fit: cover; }
+.photo-preview-name { font-size: 11px; color: var(--verde); margin-top: 5px; font-family: 'Poppins', sans-serif; font-weight: 300; }
+
+/* Message char counter */
+.char-count { font-family: 'Poppins', sans-serif; font-weight: 300; font-size: 10px; color: var(--ink-light); text-align: right; margin-top: 3px; }
+
+/* Delivery options */
+.delivery-options { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin-bottom: 1rem; }
+.delivery-opt { border: 1.5px solid rgba(215,202,169,0.8); padding: 1rem 1.2rem; cursor: pointer; transition: border-color 0.2s, background 0.2s; position: relative; }
+.delivery-opt:hover { border-color: var(--morado); }
+.delivery-opt.selected { border-color: var(--morado); background: #f5eef8; }
+.delivery-opt input[type=radio] { position: absolute; opacity: 0; }
+.delivery-opt-title { font-family: 'Cormorant Garamond', serif; font-size: 16px; color: var(--ink); margin-bottom: 3px; }
+.delivery-opt-desc { font-family: 'Poppins', sans-serif; font-weight: 300; font-size: 10.5px; color: var(--ink-light); }
+.delivery-opt-price { font-family: 'Cormorant Garamond', serif; font-size: 14px; color: var(--morado); margin-top: 5px; }
+.delivery-address { display: none; margin-top: 0.8rem; }
+.delivery-address.show { display: block; }
+
+/* Payment methods */
+.payment-methods { display: grid; grid-template-columns: repeat(3,1fr); gap: 0.8rem; }
+.pay-opt { border: 1.5px solid rgba(215,202,169,0.8); padding: 1rem; cursor: pointer; text-align: center; transition: border-color 0.2s, background 0.2s; position: relative; }
+.pay-opt:hover { border-color: var(--morado); }
+.pay-opt.selected { border-color: var(--morado); background: #f5eef8; }
+.pay-opt input[type=radio] { position: absolute; opacity: 0; }
+.pay-opt-icon { font-size: 26px; margin-bottom: 5px; }
+.pay-opt-name { font-family: 'Cormorant Garamond', serif; font-size: 15px; color: var(--ink); margin-bottom: 3px; }
+.pay-opt-desc { font-family: 'Poppins', sans-serif; font-weight: 300; font-size: 9.5px; color: var(--ink-light); line-height: 1.4; }
+
+/* Order summary */
+.order-summary { background: var(--morado-dark); color: var(--cream); padding: 1.8rem 2rem; border-radius: 2px; }
+.summary-title { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-style: italic; color: var(--lila); margin-bottom: 1.2rem; }
+.summary-row { display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 0; border-bottom: 1px solid rgba(215,202,169,0.12); font-family: 'Poppins', sans-serif; font-weight: 300; font-size: 12px; }
+.summary-row:last-of-type { border-bottom: none; }
+.summary-row-label { color: rgba(215,202,169,0.7); }
+.summary-row-val { color: var(--beige); font-weight: 400; }
+.summary-total { display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(215,202,169,0.3); }
+.summary-total-label { font-family: 'Cormorant Garamond', serif; font-size: 18px; color: var(--lila); }
+.summary-total-val { font-family: 'Cormorant Garamond', serif; font-size: 22px; color: var(--cream); }
+
+/* Submit button */
+.submit-wrap { display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+.btn-submit { background: var(--morado); color: var(--cream); padding: 16px 50px; font-family: 'Poppins', sans-serif; font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; border: none; cursor: none; transition: background 0.3s, transform 0.2s; width: 100%; text-align: center; }
+.btn-submit:hover { background: var(--morado-dark); transform: translateY(-2px); }
+.btn-submit:disabled { background: #c0afc8; cursor: not-allowed; transform: none; }
+.submit-note { font-family: 'Poppins', sans-serif; font-weight: 300; font-size: 11px; color: var(--ink-light); text-align: center; line-height: 1.6; }
+
+/* Error message */
+.field-error { font-family: 'Poppins', sans-serif; font-weight: 300; font-size: 10.5px; color: #b85c6e; margin-top: 3px; display: none; }
+.field-error.show { display: block; }
+
+/* Success overlay */
+.success-overlay { display: none; position: fixed; inset: 0; background: rgba(74,52,80,0.96); z-index: 2000; align-items: center; justify-content: center; padding: 2rem; }
+.success-overlay.show { display: flex; }
+.success-card { background: var(--cream); max-width: 520px; width: 100%; padding: 3rem 2.5rem; text-align: center; position: relative; }
+.success-icon { font-size: 50px; margin-bottom: 1rem; }
+.success-title { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-style: italic; color: var(--morado); margin-bottom: 0.5rem; }
+.success-sub { font-family: 'Sacramento', cursive; font-size: 22px; color: var(--verde); margin-bottom: 1.5rem; }
+.success-body { font-family: 'Poppins', sans-serif; font-weight: 300; font-size: 12px; color: var(--ink-light); line-height: 1.8; margin-bottom: 2rem; }
+.success-actions { display: flex; flex-direction: column; gap: 0.8rem; }
+.btn-whatsapp { background: #25D366; color: #fff; padding: 14px 30px; font-family: 'Poppins', sans-serif; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; border: none; cursor: none; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 8px; transition: background 0.3s; }
+.btn-whatsapp:hover { background: #1dba57; }
+.btn-nequi { background: #7B2FBE; color: #fff; padding: 14px 30px; font-family: 'Poppins', sans-serif; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; border: none; cursor: none; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 8px; transition: background 0.3s; }
+.btn-nequi:hover { background: #6222a0; }
+.btn-bancolombia { background: #FDDA24; color: #333; padding: 14px 30px; font-family: 'Poppins', sans-serif; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; border: none; cursor: none; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 8px; transition: opacity 0.3s; }
+.btn-bancolombia:hover { opacity: 0.85; }
+.btn-efectivo { background: var(--verde); color: #fff; padding: 14px 30px; font-family: 'Poppins', sans-serif; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; border: none; cursor: none; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 8px; }
+.success-back { font-family: 'Poppins', sans-serif; font-weight: 300; font-size: 11px; color: var(--ink-light); cursor: none; background: none; border: none; text-decoration: underline; margin-top: 0.5rem; }
+
+/* Floating cart button */
+.cart-fab { position: fixed; bottom: 2rem; right: 2rem; background: var(--morado); color: var(--cream); width: 56px; height: 56px; border-radius: 50%; display: none; align-items: center; justify-content: center; font-size: 22px; cursor: none; z-index: 400; box-shadow: 0 4px 16px rgba(106,79,112,0.35); border: none; transition: transform 0.2s, background 0.3s; }
+.cart-fab:hover { transform: scale(1.1); background: var(--morado-dark); }
+.cart-fab.show { display: flex; }
+.cart-fab-badge { position: absolute; top: -4px; right: -4px; background: #b85c6e; color: #fff; width: 20px; height: 20px; border-radius: 50%; font-size: 10px; font-family: 'Poppins', sans-serif; font-weight: 400; display: flex; align-items: center; justify-content: center; }
+
+@media(max-width:700px){
+  .order-wrap { padding: 5rem 1rem 3rem; }
+  .form-row { grid-template-columns: 1fr; }
+  .form-row.three { grid-template-columns: 1fr; }
+  .delivery-options, .payment-methods { grid-template-columns: 1fr; }
+  .form-section { padding: 1.4rem 1.2rem; }
+}
+</style>
+<div class="order-wrap">
+<div class="order-hero">
+<div class="order-hero-label">Hacer mi pedido</div>
+<h1 class="order-hero-title">Cuéntanos tu momento especial</h1>
+<p class="order-hero-sub">y lo convertimos en flores con alma</p>
+</div>
+<!-- Notice: 2 days minimum -->
+<div class="order-notice">
+<div class="order-notice-icon">📅</div>
+<div class="order-notice-text">
+<strong>Recuerda: los pedidos se reciben con mínimo 2 días de anticipación</strong> para que podamos preparar todo con el amor y el cuidado que tu momento especial merece. Pedidos urgentes consultar disponibilidad por WhatsApp.
+    </div>
+</div>
+<!-- Selected product -->
+<div class="no-product-selected" id="selected-product-display">
+<p>Aún no has seleccionado un producto. Puedes elegir desde el catálogo o describir lo que necesitas en el formulario.</p>
+<a href="#" onclick="showPage('catalogo'); return false;" style="font-family:'Poppins',sans-serif;font-weight:300;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--morado);text-decoration:none;border-bottom:1px solid var(--morado);">Ver catálogo →</a>
+</div>
+<div class="order-form" id="orderForm">
+<!-- 1. PRODUCTO Y FECHA -->
+<div class="form-section">
+<div class="form-section-title"><span>🌸</span> Producto y fecha de entrega</div>
+<div class="form-section-sub">Selecciona o describe el arreglo que deseas y la fecha en que lo necesitas</div>
+<div class="form-row">
+<div class="form-group">
+<label>Tipo de arreglo <span class="req">*</span></label>
+<select id="tipo_arreglo" required="">
+<option value="">— Seleccionar —</option>
+<optgroup label="Bouquets">
+<option>Bouquet Romántico — desde $45.000</option>
+<option>Bouquet de Rosas — desde $55.000</option>
+<option>Bouquet Pastel — desde $50.000</option>
+<option>Bouquet Eternidad (preservado) — desde $80.000</option>
+<option>Bouquet Silvestre — desde $42.000</option>
+<option>Bouquet Morado — desde $52.000</option>
+</optgroup>
+<optgroup label="Flores en Base">
+<option>Jarrón Clásico — desde $65.000</option>
+<option>Caja de Flores — desde $70.000</option>
+<option>Florero Rústico — desde $60.000</option>
+<option>Canasta Floral — desde $75.000</option>
+</optgroup>
+<optgroup label="Detalles">
+<option>Detalle con Carta — desde $60.000</option>
+<option>Mini Bouquet — desde $28.000</option>
+<option>Flores y Chocolates — desde $85.000</option>
+<option>Set Romántico — desde $90.000</option>
+<option>Desayuno Sorpresa — desde $120.000</option>
+<option>Set Bienvenida — desde $75.000</option>
+</optgroup>
+<optgroup label="Flores Amarillas (21 Marzo)">
+<option>Girasoles Felices — desde $35.000</option>
+<option>Bouquet Amarillo — desde $40.000</option>
+<option>Set 21 de Marzo — desde $65.000</option>
+<option>Jarrón Dorado — desde $70.000</option>
+</optgroup>
+<optgroup label="Globos y Sorpresas">
+<option>Globos con Flores — desde $50.000</option>
+<option>Set Celebración — desde $75.000</option>
+<option>Globo Gigante + Flores — desde $90.000</option>
+<option>Caja Sorpresa — desde $80.000</option>
+<option>Bouquet + Globo — desde $58.000</option>
+</optgroup>
+<optgroup label="Fechas Especiales">
+<option>Set Mamá Especial — desde $110.000</option>
+<option>Set Mujer Poderosa — desde $100.000</option>
+<option>Arreglo Navideño — desde $60.000</option>
+<option>Set Navideño — desde $100.000</option>
+</optgroup>
+<option value="personalizado">🌟 Arreglo personalizado (describir abajo)</option>
+</select>
+<div class="field-error" id="err-tipo">Por favor selecciona un tipo de arreglo</div>
+</div>
+<div class="form-group">
+<label>Fecha de entrega <span class="req">*</span></label>
+<input id="fecha_entrega" required="" type="date"/>
+<div class="field-error" id="err-fecha">Mínimo 2 días de anticipación</div>
+</div>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label>Hora preferida de entrega</label>
+<select id="hora_entrega">
+<option value="">— Sin preferencia —</option>
+<option>08:00 – 10:00 am</option>
+<option>10:00 – 12:00 pm</option>
+<option>12:00 – 02:00 pm</option>
+<option>02:00 – 04:00 pm</option>
+<option>04:00 – 06:00 pm</option>
+<option>06:00 – 08:00 pm</option>
+</select>
+</div>
+<div class="form-group">
+<label>Ocasión especial</label>
+<select id="ocasion">
+<option value="">— Seleccionar —</option>
+<option>Cumpleaños</option>
+<option>Aniversario</option>
+<option>Día de la Madre</option>
+<option>Día de la Mujer</option>
+<option>Amor y Amistad</option>
+<option>Flores Amarillas (21 Marzo)</option>
+<option>Graduación</option>
+<option>Bienvenida / Recibimiento</option>
+<option>Condolencias</option>
+<option>Navidad</option>
+<option>Solo porque sí 💜</option>
+<option>Otra ocasión</option>
+</select>
+</div>
+</div>
+<div class="form-row full" id="personalizado-wrap" style="display:none;">
+<div class="form-group">
+<label>Describe tu arreglo personalizado</label>
+<textarea id="desc_personalizado" placeholder="Ej: Quiero un bouquet con rosas blancas y lilas, con un tono romántico y delicado. Presupuesto aprox $70.000…" rows="3"></textarea>
+</div>
+</div>
+</div>
+<!-- 2. QUIÉN LO ENVÍA -->
+<div class="form-section">
+<div class="form-section-title"><span>💌</span> Quién envía</div>
+<div class="form-section-sub">Tus datos para confirmar el pedido y hacer el seguimiento</div>
+<div class="form-row">
+<div class="form-group">
+<label>Tu nombre completo <span class="req">*</span></label>
+<input id="nombre_envia" placeholder="Ej: Laura Martínez" required="" type="text"/>
+<div class="field-error" id="err-envia">Por favor ingresa tu nombre</div>
+</div>
+<div class="form-group">
+<label>Tu WhatsApp / Teléfono <span class="req">*</span></label>
+<input id="tel_envia" placeholder="Ej: 300 000 0000" required="" type="tel"/>
+<div class="field-error" id="err-tel">Por favor ingresa tu número</div>
+</div>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label>Tu correo electrónico</label>
+<input id="email_envia" placeholder="Ej: laura@correo.com" type="email"/>
+</div>
+<div class="form-group">
+<label>¿Eres cliente frecuente?</label>
+<select id="cliente_frecuente">
+<option>Primera vez 🌸</option>
+<option>Ya he pedido antes</option>
+</select>
+</div>
+</div>
+</div>
+<!-- 3. QUIÉN LO RECIBE -->
+<div class="form-section">
+<div class="form-section-title"><span>🎁</span> Quién recibe el detalle</div>
+<div class="form-section-sub">Para que el arreglo llegue perfectamente dedicado a esa persona especial</div>
+<div class="form-row">
+<div class="form-group">
+<label>Nombre de quien recibe <span class="req">*</span></label>
+<input id="nombre_recibe" placeholder="Ej: Valentina García" required="" type="text"/>
+<div class="field-error" id="err-recibe">Por favor ingresa el nombre de quien recibe</div>
+</div>
+<div class="form-group">
+<label>Teléfono de quien recibe</label>
+<input id="tel_recibe" placeholder="Ej: 310 000 0000 (opcional)" type="tel"/>
+</div>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label>Relación con quien recibe</label>
+<select id="relacion">
+<option>Pareja / Novio(a)</option>
+<option>Esposo(a)</option>
+<option>Mamá</option>
+<option>Papá</option>
+<option>Hijo(a)</option>
+<option>Amigo(a)</option>
+<option>Hermano(a)</option>
+<option>Abuela / Abuelo</option>
+<option>Compañero(a) de trabajo</option>
+<option>Para mí mismo(a) 💜</option>
+<option>Otro</option>
+</select>
+</div>
+<div class="form-group">
+<label>¿Sabe que recibirá algo?</label>
+<select id="es_sorpresa">
+<option value="sorpresa">No, es sorpresa 🤫</option>
+<option value="sabe">Sí, lo sabe</option>
+</select>
+</div>
+</div>
+</div>
+<!-- 4. MENSAJE PERSONAL -->
+<div class="form-section">
+<div class="form-section-title"><span>✍️</span> Mensaje para la tarjeta</div>
+<div class="form-section-sub">Escribe el mensaje que irá escrito a mano en la tarjeta del arreglo — máx. 200 caracteres</div>
+<div class="form-row full">
+<div class="form-group">
+<label>Tu mensaje</label>
+<textarea id="mensaje_tarjeta" maxlength="200" oninput="updateCharCount()" placeholder="Ej: Porque cada día junto a ti es el más bonito. Te amo con todo mi corazón. — Laura" rows="3"></textarea>
+<div class="char-count"><span id="char-count">0</span> / 200</div>
+</div>
+</div>
+<div class="form-row full">
+<div class="form-group">
+<label>Firma de la tarjeta</label>
+<input id="firma_tarjeta" placeholder="Ej: Con amor, Laura 💜 — o 'Tu amiga secreta'" type="text"/>
+</div>
+</div>
+</div>
+<!-- 5. FOTO PERSONALIZADA -->
+<div class="form-section">
+<div class="form-section-title"><span>📷</span> Foto personalizada (opcional)</div>
+<div class="form-section-sub">Si deseas incluir una foto de ustedes o una imagen especial en el arreglo, súbela aquí</div>
+<div class="photo-upload-area" id="photoArea" onclick="document.getElementById('foto_input').click()">
+<input accept="image/*" id="foto_input" onchange="handlePhotoUpload(this)" style="display:none;" type="file"/>
+<div class="photo-upload-icon">🖼️</div>
+<div class="photo-upload-text">
+<strong>Haz clic para subir una foto</strong><br/>
+          JPG, PNG o WEBP · Máx. 5MB · Se imprimirá o incluirá en el arreglo
         </div>
-    </section>
+<div class="photo-preview" id="photoPreview">
+<img alt="" id="photoImg" src=""/>
+<div class="photo-preview-name" id="photoName"></div>
+</div>
+</div>
+<div class="form-row full" style="margin-top:0.8rem;">
+<div class="form-group">
+<label>Instrucciones para la foto</label>
+<input id="instrucciones_foto" placeholder="Ej: Quiero que la pongan dentro de un portarretrato pequeño junto al bouquet" type="text"/>
+</div>
+</div>
+</div>
+<!-- 6. ENTREGA -->
+<div class="form-section">
+<div class="form-section-title"><span>🚚</span> Tipo de entrega</div>
+<div class="form-section-sub">¿Recogemos en nuestro punto o lo llevamos a domicilio?</div>
+<div class="delivery-options">
+<div class="delivery-opt selected" id="opt-domicilio" onclick="selectDelivery('domicilio')">
+<input checked="" name="delivery" type="radio" value="domicilio"/>
+<div class="delivery-opt-title">🏠 Domicilio</div>
+<div class="delivery-opt-desc">Lo llevamos a la dirección que indiques en Chinácota y municipios cercanos</div>
+<div class="delivery-opt-price">Consultar costo de envío</div>
+</div>
+<div class="delivery-opt" id="opt-recoger" onclick="selectDelivery('recoger')">
+<input name="delivery" type="radio" value="recoger"/>
+<div class="delivery-opt-title">📍 Recoger en punto</div>
+<div class="delivery-opt-desc">Vienes a recoger tu pedido en nuestra dirección en Chinácota</div>
+<div class="delivery-opt-price">Sin costo adicional</div>
+</div>
+</div>
+<div class="delivery-address show" id="address-fields">
+<div class="form-row full">
+<div class="form-group">
+<label>Dirección completa de entrega <span class="req">*</span></label>
+<input id="direccion_calle" placeholder="Ej: Calle 5 # 8-23, Barrio Centro" required="" type="text"/>
+<div class="field-error" id="err-dir">Por favor ingresa la dirección</div>
+</div>
+</div>
+<div class="form-row three">
+<div class="form-group">
+<label>Municipio / Ciudad <span class="req">*</span></label>
+<input id="municipio" placeholder="Ej: Chinácota" type="text" value="Chinácota"/>
+</div>
+<div class="form-group">
+<label>Barrio / Sector</label>
+<input id="barrio" placeholder="Ej: Barrio El Centro" type="text"/>
+</div>
+<div class="form-group">
+<label>Apto / Casa / Torre</label>
+<input id="apto" placeholder="Ej: Casa 3, Apto 201" type="text"/>
+</div>
+</div>
+<div class="form-row full">
+<div class="form-group">
+<label>Referencias o indicaciones para llegar</label>
+<input id="referencias" placeholder="Ej: Frente al parque principal, portón azul, llamar al llegar" type="text"/>
+</div>
+</div>
+</div>
+</div>
+<!-- 7. PREFERENCIAS DEL ARREGLO -->
+<div class="form-section">
+<div class="form-section-title"><span>🎨</span> Preferencias del arreglo</div>
+<div class="form-section-sub">Ayúdanos a hacerlo exactamente como lo imaginas</div>
+<div class="form-row">
+<div class="form-group">
+<label>Colores preferidos</label>
+<input id="colores" placeholder="Ej: Rosas, lilas y blancos / Tonos cálidos" type="text"/>
+</div>
+<div class="form-group">
+<label>Flores favoritas de quien recibe</label>
+<input id="flores_fav" placeholder="Ej: Le encantan las rosas rojas y las margaritas" type="text"/>
+</div>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label>Presupuesto aproximado</label>
+<select id="presupuesto">
+<option value="">— Seleccionar —</option>
+<option>$25.000 – $50.000</option>
+<option>$50.000 – $80.000</option>
+<option>$80.000 – $120.000</option>
+<option>$120.000 – $200.000</option>
+<option>Más de $200.000</option>
+<option>Flexible, lo que quede mejor</option>
+</select>
+</div>
+<div class="form-group">
+<label>¿Requiere empaque especial?</label>
+<select id="empaque">
+<option>Empaque estándar Bellísimo Momentos</option>
+<option>Empaque premium con caja y lazo</option>
+<option>Sin empaque adicional</option>
+</select>
+</div>
+</div>
+<div class="form-row full">
+<div class="form-group">
+<label>Observaciones adicionales</label>
+<textarea id="observaciones" placeholder="Cualquier detalle extra que debamos saber: alergias, gustos especiales, cómo le gustan las flores a quien recibe…" rows="3"></textarea>
+</div>
+</div>
+</div>
+<!-- 8. FORMA DE PAGO -->
+<div class="form-section">
+<div class="form-section-title"><span>💳</span> Forma de pago</div>
+<div class="form-section-sub">Elige cómo prefieres pagar — te enviaremos los datos por WhatsApp</div>
+<div class="payment-methods">
+<div class="pay-opt selected" id="pay-nequi" onclick="selectPay('nequi')">
+<input checked="" name="pago" type="radio" value="nequi"/>
+<div class="pay-opt-icon">📱</div>
+<div class="pay-opt-name">Nequi</div>
+<div class="pay-opt-desc">Transfiere al número 318 883 8655</div>
+</div>
+<div class="pay-opt" id="pay-bancolombia" onclick="selectPay('bancolombia')">
+<input name="pago" type="radio" value="bancolombia"/>
+<div class="pay-opt-icon">🏦</div>
+<div class="pay-opt-name">Bancolombia</div>
+<div class="pay-opt-desc">Transferencia o depósito — datos por WhatsApp</div>
+</div>
+<div class="pay-opt" id="pay-daviplata" onclick="selectPay('daviplata')">
+<input name="pago" type="radio" value="daviplata"/>
+<div class="pay-opt-icon">💜</div>
+<div class="pay-opt-name">Daviplata</div>
+<div class="pay-opt-desc">Transfiere al número 318 883 8655</div>
+</div>
+<div class="pay-opt" id="pay-efectivo" onclick="selectPay('efectivo')">
+<input name="pago" type="radio" value="efectivo"/>
+<div class="pay-opt-icon">💵</div>
+<div class="pay-opt-name">Efectivo</div>
+<div class="pay-opt-desc">Pago en punto de recogida o al recibir (previa confirmación)</div>
+</div>
+<div class="pay-opt" id="pay-whatsapp" onclick="selectPay('whatsapp')">
+<input name="pago" type="radio" value="whatsapp"/>
+<div class="pay-opt-icon">💬</div>
+<div class="pay-opt-name">Acordar por WhatsApp</div>
+<div class="pay-opt-desc">Te contactamos para coordinar el pago</div>
+</div>
+<div class="pay-opt" id="pay-contraentrega" onclick="selectPay('contraentrega')">
+<input name="pago" type="radio" value="contraentrega"/>
+<div class="pay-opt-icon">🤝</div>
+<div class="pay-opt-name">Contraentrega</div>
+<div class="pay-opt-desc">Solo Chinácota, sujeto a aprobación previa</div>
+</div>
+</div>
+</div>
+<!-- RESUMEN -->
+<div class="order-summary" id="orderSummary">
+<div class="summary-title">Resumen de tu pedido</div>
+<div class="summary-row"><span class="summary-row-label">Producto</span><span class="summary-row-val" id="sum-producto">—</span></div>
+<div class="summary-row"><span class="summary-row-label">Fecha de entrega</span><span class="summary-row-val" id="sum-fecha">—</span></div>
+<div class="summary-row"><span class="summary-row-label">Para</span><span class="summary-row-val" id="sum-para">—</span></div>
+<div class="summary-row"><span class="summary-row-label">Entrega</span><span class="summary-row-val" id="sum-entrega">—</span></div>
+<div class="summary-row"><span class="summary-row-label">Pago</span><span class="summary-row-val" id="sum-pago">—</span></div>
+<div class="summary-total">
+<span class="summary-total-label">Total estimado</span>
+<span class="summary-total-val" id="sum-total">Por confirmar</span>
+</div>
+</div>
+<!-- SUBMIT -->
+<div class="submit-wrap">
+<button class="btn-submit" onclick="submitOrder(event)">Enviar pedido 💜</button>
+<p class="submit-note">Al enviar tu pedido, recibirás una confirmación por WhatsApp en el número <strong>318 883 8655</strong>.<br/>Recuerda que los pedidos tienen un mínimo de 2 días de anticipación.</p>
+</div>
+</div><!-- end order-form -->
+</div><!-- end order-wrap -->
+<!-- SUCCESS OVERLAY -->
+<div class="success-overlay" id="successOverlay">
+<div class="success-card">
+<div class="success-icon">🌸</div>
+<div class="success-title">¡Pedido recibido!</div>
+<div class="success-sub">con mucho amor, gracias</div>
+<div class="success-body" id="success-body">
+      Tu pedido ha sido enviado. En breve te contactamos al WhatsApp para confirmar los detalles y coordinar el pago.<br/><br/>
+<strong>Bellísimo Momentos · 318 883 8655</strong>
+</div>
+<div class="success-actions">
+<a class="btn-whatsapp" href="#" id="whatsapp-link" target="_blank">
+<span>💬</span> Confirmar por WhatsApp
+      </a>
+<div id="pay-nequi-btn" style="display:none;">
+<a class="btn-nequi" href="#"><span>📱</span> Pagar por Nequi · 318 883 8655</a>
+</div>
+<div id="pay-bancolombia-btn" style="display:none;">
+<a class="btn-bancolombia" href="#"><span>🏦</span> Datos Bancolombia por WhatsApp</a>
+</div>
+<div id="pay-daviplata-btn" style="display:none;">
+<a class="btn-nequi" href="#" style="background:#e60026;"><span>💜</span> Pagar por Daviplata · 318 883 8655</a>
+</div>
+<button class="success-back" onclick="closeSuccess()">← Volver al inicio</button>
+</div>
+</div>
+</div>
+</div><!-- end page-pedido -->
+<!-- FLOATING CART BUTTON -->
+<button class="cart-fab" id="cartFab" onclick="showPage('pedido')" title="Hacer pedido">
+  💐
+  <div class="cart-fab-badge" id="cartBadge">1</div>
+</button>
+<script>
+// ── CART STATE ──
+let selectedProduct = null;
+let selectedPayment = 'nequi';
+let selectedDelivery = 'domicilio';
 
-    <!-- SECCIÓN CONTACTO -->
-    <section id="contacto" class="section">
-        <h2>Contáctanos</h2>
-        <p>Haz tu pedido o cotiza con nosotros:</p>
-        <p><strong>WhatsApp:</strong> 300 000 0000</p>
-        <p><strong>Instagram:</strong> @bellisimobloom</p>
-    </section>
+// ── DATE MINIMUM (2 days from today) ──
+(function setMinDate(){
+  const d = new Date();
+  d.setDate(d.getDate() + 2);
+  const y = d.getFullYear();
+  const m = String(d.getMonth()+1).padStart(2,'0');
+  const day = String(d.getDate()).padStart(2,'0');
+  const el = document.getElementById('fecha_entrega');
+  if(el){ el.min = y+'-'+m+'-'+day; el.value = y+'-'+m+'-'+day; }
+  updateSummary();
+})();
 
-    <!-- PIE DE PÁGINA -->
-    <footer class="footer">
-        <p>© 2026 Bellisimo Bloom - Todos los derechos reservados</p>
-    </footer>
+// ── ADD TO CART (called from catalog) ──
+function addToCart(name, emoji, price) {
+  selectedProduct = { name, emoji, price };
+  const fab = document.getElementById('cartFab');
+  if(fab) { fab.classList.add('show'); }
+  // show selected in order page
+  renderSelectedProduct();
+  // update tipo_arreglo select if matches
+  const sel = document.getElementById('tipo_arreglo');
+  if(sel){ for(let o of sel.options){ if(o.text.startsWith(name)) { sel.value=o.value||o.text; break; } } }
+  updateSummary();
+  // Brief visual feedback
+  showPage('pedido');
+}
 
-</body>
+function renderSelectedProduct() {
+  const el = document.getElementById('selected-product-display');
+  if(!el) return;
+  if(selectedProduct) {
+    el.className = 'selected-product';
+    el.innerHTML = `
+      <div class="selected-product-emoji">${selectedProduct.emoji}</div>
+      <div class="selected-product-info">
+        <div class="selected-product-name">${selectedProduct.name}</div>
+        <div class="selected-product-price">${selectedProduct.price}</div>
+      </div>
+      <a href="#" class="selected-product-change" onclick="showPage('catalogo'); return false;">Cambiar</a>`;
+  } else {
+    el.className = 'no-product-selected';
+    el.innerHTML = `<p>Aún no has seleccionado un producto. Puedes elegir desde el catálogo o describir lo que necesitas en el formulario.</p>
+      <a href="#" onclick="showPage('catalogo'); return false;" style="font-family:'Poppins',sans-serif;font-weight:300;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--morado);text-decoration:none;border-bottom:1px solid var(--morado);">Ver catálogo →</a>`;
+  }
+}
+
+// ── DELIVERY TOGGLE ──
+function selectDelivery(type) {
+  selectedDelivery = type;
+  document.getElementById('opt-domicilio').classList.toggle('selected', type==='domicilio');
+  document.getElementById('opt-recoger').classList.toggle('selected', type==='recoger');
+  const addrFields = document.getElementById('address-fields');
+  const dirInput = document.getElementById('direccion_calle');
+  if(type==='domicilio'){
+    addrFields.classList.add('show');
+    if(dirInput) dirInput.required=true;
+  } else {
+    addrFields.classList.remove('show');
+    if(dirInput) dirInput.required=false;
+  }
+  updateSummary();
+}
+
+// ── PAYMENT TOGGLE ──
+function selectPay(type) {
+  selectedPayment = type;
+  document.querySelectorAll('.pay-opt').forEach(el => el.classList.remove('selected'));
+  const el = document.getElementById('pay-'+type);
+  if(el) el.classList.add('selected');
+  updateSummary();
+}
+
+// ── PERSONALIZADO TOGGLE ──
+document.getElementById('tipo_arreglo')?.addEventListener('change', function(){
+  const pw = document.getElementById('personalizado-wrap');
+  if(pw) pw.style.display = this.value==='personalizado' ? 'grid' : 'none';
+  updateSummary();
+});
+
+// ── CHAR COUNT ──
+function updateCharCount() {
+  const el = document.getElementById('mensaje_tarjeta');
+  const cnt = document.getElementById('char-count');
+  if(el && cnt) cnt.textContent = el.value.length;
+}
+
+// ── PHOTO UPLOAD ──
+function handlePhotoUpload(input) {
+  if(!input.files || !input.files[0]) return;
+  const file = input.files[0];
+  const reader = new FileReader();
+  reader.onload = e => {
+    const preview = document.getElementById('photoPreview');
+    const img = document.getElementById('photoImg');
+    const name = document.getElementById('photoName');
+    if(preview && img && name){
+      img.src = e.target.result;
+      name.textContent = '✓ ' + file.name;
+      preview.style.display = 'block';
+    }
+  };
+  reader.readAsDataURL(file);
+}
+
+// ── LIVE SUMMARY ──
+function updateSummary() {
+  const tipo = document.getElementById('tipo_arreglo')?.value || '—';
+  const fecha = document.getElementById('fecha_entrega')?.value || '';
+  const para = document.getElementById('nombre_recibe')?.value || '—';
+  const payLabels = { nequi:'Nequi', bancolombia:'Bancolombia', daviplata:'Daviplata', efectivo:'Efectivo', whatsapp:'Por WhatsApp', contraentrega:'Contraentrega' };
+  const delivLabel = selectedDelivery === 'domicilio' ? 'A domicilio' : 'Recoger en punto';
+
+  document.getElementById('sum-producto').textContent = tipo.length > 35 ? tipo.slice(0,35)+'…' : tipo || '—';
+  document.getElementById('sum-fecha').textContent = fecha ? formatDate(fecha) : '—';
+  document.getElementById('sum-para').textContent = para || '—';
+  document.getElementById('sum-entrega').textContent = delivLabel;
+  document.getElementById('sum-pago').textContent = payLabels[selectedPayment] || selectedPayment;
+
+  // price from selected product or from dropdown
+  if(selectedProduct) {
+    document.getElementById('sum-total').textContent = selectedProduct.price;
+  } else {
+    const match = tipo.match(/\$[\d\.]+/);
+    document.getElementById('sum-total').textContent = match ? 'Desde ' + match[0] : 'Por confirmar';
+  }
+}
+
+function formatDate(str) {
+  const [y,m,d] = str.split('-');
+  const months = ['','Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+  return d + ' de ' + months[parseInt(m)] + ' de ' + y;
+}
+
+// Listen for summary updates
+['tipo_arreglo','fecha_entrega','nombre_recibe'].forEach(id => {
+  document.getElementById(id)?.addEventListener('change', updateSummary);
+  document.getElementById(id)?.addEventListener('input', updateSummary);
+});
+
+// ── VALIDATION & SUBMIT ──
+function submitOrder(e) {
+  e.preventDefault();
+  let valid = true;
+
+  const fields = [
+    { id: 'tipo_arreglo', err: 'err-tipo' },
+    { id: 'fecha_entrega', err: 'err-fecha' },
+    { id: 'nombre_envia', err: 'err-envia' },
+    { id: 'tel_envia', err: 'err-tel' },
+    { id: 'nombre_recibe', err: 'err-recibe' },
+  ];
+
+  // delivery address required only if domicilio
+  if(selectedDelivery === 'domicilio') {
+    fields.push({ id: 'direccion_calle', err: 'err-dir' });
+  }
+
+  // Clear previous errors
+  fields.forEach(f => {
+    const el = document.getElementById(f.id);
+    const err = document.getElementById(f.err);
+    if(el) el.classList.remove('error');
+    if(err) err.classList.remove('show');
+  });
+
+  // Validate each
+  fields.forEach(f => {
+    const el = document.getElementById(f.id);
+    const err = document.getElementById(f.err);
+    if(el && !el.value.trim()) {
+      el.classList.add('error');
+      if(err) err.classList.add('show');
+      valid = false;
+    }
+  });
+
+  // Date validation
+  const fechaEl = document.getElementById('fecha_entrega');
+  if(fechaEl && fechaEl.value) {
+    const chosen = new Date(fechaEl.value + 'T00:00:00');
+    const minDate = new Date();
+    minDate.setDate(minDate.getDate() + 2);
+    minDate.setHours(0,0,0,0);
+    if(chosen < minDate) {
+      fechaEl.classList.add('error');
+      document.getElementById('err-fecha').classList.add('show');
+      valid = false;
+    }
+  }
+
+  if(!valid) {
+    document.querySelector('.error')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    return;
+  }
+
+  // Build order data
+  const order = {
+    producto: document.getElementById('tipo_arreglo').value,
+    fecha: formatDate(document.getElementById('fecha_entrega').value),
+    hora: document.getElementById('hora_entrega').value || 'Sin preferencia',
+    ocasion: document.getElementById('ocasion').value || '—',
+    nombre_envia: document.getElementById('nombre_envia').value,
+    tel_envia: document.getElementById('tel_envia').value,
+    email: document.getElementById('email_envia').value || '—',
+    nombre_recibe: document.getElementById('nombre_recibe').value,
+    tel_recibe: document.getElementById('tel_recibe').value || '—',
+    relacion: document.getElementById('relacion').value,
+    es_sorpresa: document.getElementById('es_sorpresa').value,
+    mensaje: document.getElementById('mensaje_tarjeta').value || '—',
+    firma: document.getElementById('firma_tarjeta').value || '—',
+    entrega: selectedDelivery === 'domicilio' ? 'Domicilio' : 'Recoger en punto',
+    direccion: selectedDelivery === 'domicilio' ? [
+      document.getElementById('direccion_calle').value,
+      document.getElementById('municipio').value,
+      document.getElementById('barrio').value,
+      document.getElementById('apto').value,
+      document.getElementById('referencias').value
+    ].filter(Boolean).join(', ') : 'Recoge en punto',
+    colores: document.getElementById('colores').value || '—',
+    flores_fav: document.getElementById('flores_fav').value || '—',
+    presupuesto: document.getElementById('presupuesto').value || '—',
+    empaque: document.getElementById('empaque').value,
+    observaciones: document.getElementById('observaciones').value || '—',
+    pago: selectedPayment,
+  };
+
+  // Build WhatsApp message
+  const msg = `🌸 *NUEVO PEDIDO — Bellísimo Momentos*
+
+📦 *Producto:* ${order.producto}
+📅 *Fecha entrega:* ${order.fecha}
+🕐 *Hora:* ${order.hora}
+🎉 *Ocasión:* ${order.ocasion}
+
+*QUIÉN ENVÍA*
+👤 Nombre: ${order.nombre_envia}
+📞 Tel: ${order.tel_envia}
+📧 Email: ${order.email}
+
+*QUIÉN RECIBE*
+🎁 Para: ${order.nombre_recibe}
+📞 Tel recibe: ${order.tel_recibe}
+💜 Relación: ${order.relacion}
+🤫 ¿Sorpresa?: ${order.es_sorpresa === 'sorpresa' ? 'Sí, es sorpresa' : 'No, lo sabe'}
+
+*TARJETA*
+✍️ Mensaje: ${order.mensaje}
+🖊️ Firma: ${order.firma}
+
+*ENTREGA*
+🚚 Tipo: ${order.entrega}
+📍 Dirección: ${order.direccion}
+
+*PREFERENCIAS*
+🎨 Colores: ${order.colores}
+🌹 Flores fav: ${order.flores_fav}
+💰 Presupuesto: ${order.presupuesto}
+🎀 Empaque: ${order.empaque}
+📝 Observaciones: ${order.observaciones}
+
+*PAGO:* ${order.pago.toUpperCase()}
+
+_Enviado desde bellisimomomentoscol.com_`;
+
+  const waURL = 'https://wa.me/573188838655?text=' + encodeURIComponent(msg);
+  document.getElementById('whatsapp-link').href = waURL;
+
+  // Show/hide payment buttons
+  document.getElementById('pay-nequi-btn').style.display = selectedPayment === 'nequi' ? 'block' : 'none';
+  document.getElementById('pay-bancolombia-btn').style.display = selectedPayment === 'bancolombia' ? 'block' : 'none';
+  document.getElementById('pay-daviplata-btn').style.display = selectedPayment === 'daviplata' ? 'block' : 'none';
+
+  // Update success body
+  document.getElementById('success-body').innerHTML = `
+    Tu pedido para <strong>${order.nombre_recibe}</strong> está en camino. 
+    Te contactaremos al <strong>${order.tel_envia}</strong> para confirmarlo.<br><br>
+    Fecha de entrega: <strong>${order.fecha}</strong><br><br>
+    <strong>Bellísimo Momentos · 318 883 8655</strong>`;
+
+  // Show success
+  document.getElementById('successOverlay').classList.add('show');
+}
+
+function closeSuccess() {
+  document.getElementById('successOverlay').classList.remove('show');
+  showPage('home');
+}
+
+// ── EXPOSE addToCart globally for catalog buttons ──
+window.addToCart = addToCart;
+
+// Read product name+price from DOM and call addToCart
+function handleCatClick(link) {
+  const card = link.closest(".cat-card");
+  if (!card) { showPage("pedido"); return; }
+  const name = card.querySelector(".cat-name")?.textContent?.trim() || "Arreglo personalizado";
+  const price = card.querySelector(".cat-price")?.textContent?.trim() || "Por confirmar";
+  const imgDiv = card.querySelector(".cat-img");
+  // get last text node (emoji)
+  let emoji = "💐";
+  if (imgDiv) {
+    const nodes = Array.from(imgDiv.childNodes);
+    const textNode = nodes.find(n => n.nodeType === 3 && n.textContent.trim());
+    if (textNode) emoji = textNode.textContent.trim();
+  }
+  addToCart(name, emoji, price);
+}
+window.handleCatClick = handleCatClick;
+</script>
+<script src="js/main.js"></script></body>
 </html>
